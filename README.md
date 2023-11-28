@@ -79,7 +79,74 @@ Installation and Instruction to use:
 4. Run the SourceCode and a window will pop up for the user to enter their infomation and a personalized daily diet list will pop up.
 
 
-Functionalities and Test Results
+Functionalities and Test Results:
+
+Diet Plan Generator (Code 1):
+
+#### Functionalities:
+1. **User Input:**
+   - Takes user input for current weight, sex, current daily calorie intake, and goal (lose, gain, maintain).
+   
+2. **API Integration:**
+   - Utilizes the USDA FoodData Central API to fetch nutritional information for a predefined list of foods.
+   
+3. **Diet Plan Generation:**
+   - Calculates target calories based on user input and generates a personalized diet plan.
+   - Randomly selects foods for each meal while considering calorie constraints and avoiding repetition.
+
+4. **User Interface:**
+   - Provides a basic Tkinter GUI for user interaction.
+   - Displays the generated diet plan in a pop-up window.
+
+#### Testing Results:
+1. **Input Validation:**
+   - Tested with both valid and invalid inputs for weight, sex, current daily calorie intake, and goal.
+   - The application correctly handles invalid inputs and provides appropriate feedback.
+
+2. **API Integration:**
+   - Successfully retrieves nutritional information from the USDA FoodData Central API.
+   - Handles API errors and provides appropriate feedback to the user.
+
+3. **Diet Plan Generation:**
+   - Generates a diet plan with randomized food selections for each meal.
+   - Ensures that the generated plan adheres to the specified calorie constraints.
+
+4. **User Interface:**
+   - The Tkinter GUI displays input fields and a button for generating the diet plan.
+   - The generated diet plan is displayed in a pop-up window.
+
+### Nutritional Data Fetcher (Code 2):
+
+#### Functionalities:
+1. **API Integration:**
+   - Fetches specific nutritional information (Calories, Sugars, Protein, Total Fat) for a predefined list of foods from the USDA FoodData Central API.
+   
+2. **Data Processing:**
+   - Processes the API response to extract and organize relevant nutritional information for each food.
+
+3. **Data Storage:**
+   - Saves the processed nutritional data, including food names, in a JSON file (`food_nutrition_data.json`).
+
+#### Testing Results:
+1. **API Integration:**
+   - Successfully retrieves specific nutritional information for each food from the USDA FoodData Central API.
+
+2. **Data Processing:**
+   - Extracts and organizes relevant nutritional information from the API response.
+
+3. **Data Storage:**
+   - Saves the processed nutritional data to a JSON file.
+   - The saved JSON file (`food_nutrition_data.json`) can be used as input for the Diet Plan Generator.
+
+### Overall Result:
+Both functionalities work as intended, and the testing results confirm that the applications successfully fetch nutritional data, generate personalized diet plans, and handle user inputs appropriately. The generated diet plans are based on the nutritional information retrieved from the USDA FoodData Central API.
+
+
+Discussion and Conclusion:
+
+One of the issues we have encountered during this project was developing a user interface for our software. It was the first time for us to implement tkinter into python to generate a simple user interface for program. However, the UI itself is overly simple and does not have any design to make our software unique, this would be something to improve upon. Futhermore, the food database itself is only limited to 100 foods, this could be further increase at the cost of a long generating time since the file Food Data Generator.py is taking the data from USDA one by one, the entire software would be more efficient if we find a way to extract multiple objects along with their data (calories, fat, carbo, protein) from the website to shorten the run time. The list of foods itself can also be enhanced upon based on categorizing according to which foods are suitable for breakfast, lunch, and dinner, this issue will probably require manual selection of each food and putting them into separate lists, but it will create a diet plan that makes more sense then what we have right now. 
+
+
 
 
 
