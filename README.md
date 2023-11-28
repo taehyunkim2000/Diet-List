@@ -116,9 +116,13 @@ Diet Plan Generator (Code 1):
    - The generated diet plan is displayed in a pop-up window.
 
 Enter your current weight in kg: 50
+
 Enter your sex (male/female): male
+
 Enter your current daily calorie intake: 2000
+
 Do you want to lose, gain, or maintain your weight? (lose/gain/maintain): gain
+
 Your personalized daily diet plan:
 Breakfast (08:00 AM):
   - Safflower oil (900 Calories)
