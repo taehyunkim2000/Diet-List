@@ -115,6 +115,24 @@ Diet Plan Generator (Code 1):
    - The Tkinter GUI displays input fields and a button for generating the diet plan.
    - The generated diet plan is displayed in a pop-up window.
 
+Enter your current weight in kg: 50
+Enter your sex (male/female): male
+Enter your current daily calorie intake: 2000
+Do you want to lose, gain, or maintain your weight? (lose/gain/maintain): gain
+Your personalized daily diet plan:
+Breakfast (08:00 AM):
+  - Safflower oil (900 Calories)
+  - Kidney beans (100 Calories)
+  - Turmeric (0.0 Calories)
+Lunch (12:00 PM):
+  - Canola oil (900 Calories)
+  - Cod (100 Calories)
+  - Parsley (0.0 Calories)
+Dinner (07:00 PM):
+  - Soybean oil (900 Calories)
+  - Lobsters (97.0 Calories)
+  - Cassava (None Calories)
+
 ### Nutritional Data Fetcher (Code 2):
 
 #### Functionalities:
@@ -144,8 +162,10 @@ Both functionalities work as intended, and the testing results confirm that the 
 
 Discussion and Conclusion:
 
-One of the issues we have encountered during this project was developing a user interface for our software. It was the first time for us to implement tkinter into python to generate a simple user interface for program. However, the UI itself is overly simple and does not have any design to make our software unique, this would be something to improve upon. Futhermore, the food database itself is only limited to 100 foods, this could be further increase at the cost of a long generating time since the file Food Data Generator.py is taking the data from USDA one by one, the entire software would be more efficient if we find a way to extract multiple objects along with their data (calories, fat, carbo, protein) from the website to shorten the run time. The list of foods itself can also be enhanced upon based on categorizing according to which foods are suitable for breakfast, lunch, and dinner, this issue will probably require manual selection of each food and putting them into separate lists, but it will create a diet plan that makes more sense then what we have right now. 
+One of the issues we have encountered during this project was developing a user interface for our software. It was the first time for us to implement tkinter into python to generate a simple user interface for program. However, the UI itself is overly simple and does not have any design to make our software unique, this would be something to improve upon. Futhermore, the food database itself is only limited to 100 foods, this could be further increase at the cost of a long generating time since the file Food Data Generator.py is taking the data from USDA one by one, the entire software would be more efficient if we find a way to extract multiple objects along with their data (calories, fat, carbo, protein) from the website to shorten the run time. The list of foods itself can also be enhanced upon based on categorizing according to which foods are suitable for breakfast, lunch, and dinner, this issue will probably require manual selection of each food and putting them into separate lists, but it will create a diet plan that makes more sense then what we have right now. The program also ONLY consider the amount of calorie intake each day for the user neglecting protein, carbos, and fat, this might result the diet list being unhealthy.
 
+Course learning Applications:
+Two things we used the most in this project are lists and for loops we learned from class. List is when we needed to create a "database" of foods that we need to select from and updating it accordingly to avoid repetition of foods in each day. In terms of for loops, the implementation is mostly scanning through the database of foods and taking their calories and name so we can store it into the diet plan for the user. We've also used math.random to randomly select food from the list to ensure variety for the user. We've also created multiple functions to create the list of foods, extract data from USDA website, organize the list, update the list, and lastly generating the diet plan and making it look neat.
 
 
 
