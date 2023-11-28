@@ -81,7 +81,7 @@ Installation and Instruction to use:
 
 Functionalities and Test Results:
 
-Diet Plan Generator (Code 1):
+Diet Plan Generator (SourceCode.py):
 
 #### Functionalities:
 1. **User Input:**
